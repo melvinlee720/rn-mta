@@ -1,7 +1,7 @@
 {
   "name": "rnmta",
   "title": "React Native Mta",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react native for tencent MTA",
   "main": "index.js",
   "scripts": {

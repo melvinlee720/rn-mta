@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.platform      = :ios, "9.0"
   s.homepage     = package['homepage']
   s.source       = { :git => package['repository']['url'], :tag => package['version'] }
-  s.source_files = 'ios/mta.{h,m}'
+  s.source_files = 'ios/Mta.{h,m}'
   s.requires_arc = true
   s.frameworks = "AdSupport", "CFNetwork", "SystemConfiguration", "CoreTelephony"
   s.libraries = "z", "sqlite3"

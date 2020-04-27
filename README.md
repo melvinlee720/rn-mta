@@ -7,13 +7,13 @@
 ## 安装
 
 ```bash
-yarn add rn-mta
+yarn add rnmta
 ```
 
 or
 
 ```bash
-npm install --save rn-mta
+npm install --save rnmta
 ```
 
 ## 配置

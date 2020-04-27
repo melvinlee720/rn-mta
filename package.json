@@ -1,0 +1,34 @@
+{
+  "name": "react-native-mta",
+  "title": "React Native Mta",
+  "version": "1.0.0",
+  "description": "react native for tencent MTA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/melvinlee720/rn-mta.git"
+  },
+  "keywords": [
+    "react-native",
+    "tencent",
+    "MTA"
+  ],
+  "author": "Melvin Lee",
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "peerDependencies": {
+    "react": "^16.8.1",
+    "react-native": ">=0.60.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.9.0",
+    "react-native": "^0.61.5"
+  },
+  "bugs": {
+    "url": "https://github.com/melvinlee720/rn-mta/issues"
+  },
+  "homepage": "https://github.com/melvinlee720/rn-mta/react-native-mta#readme"
+}

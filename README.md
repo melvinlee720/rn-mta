@@ -4,6 +4,8 @@
 
 - iOS SDK version 2.6.0
 
+#### 此项目基于 [yyyyu/react-native-mta](https://github.com/yyyyu/react-native-mta)，升级 ios SDK 至最新2.6.0。[更新说明](http://mta.qq.com/docs/release_note_SDK.html)
+
 ## 安装
 
 ```bash

@@ -28,6 +28,25 @@ npm install --save rnmta
 cd ios && pod install
 ```
 
+### android
+
+#### 额外配置
+
+在 android/app/build.gradle 文件默认配置部分添加如下参数，此部分可以通过代码动态覆盖，gradle 同步时不添加则会出错无法编译
+
+```Groovy
+android {
+    defaultConfig {
+    	// add this
+        manifestPlaceholders = [
+            MTA_APPKEY: "",
+            MTA_CHANNEL: ""
+        ]
+    }
+}
+```
+
+
 ## JS API
 
 ```javascript

@@ -25,7 +25,12 @@
   },
   "devDependencies": {
     "react": "^16.9.0",
-    "react-native": "^0.61.5"
+    "react-native": "^0.61.5",
+    "babel-eslint": "^8.2.3",
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   },
   "bugs": {
     "url": "https://github.com/melvinlee720/rn-mta/issues"

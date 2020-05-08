@@ -27,7 +27,7 @@ public class RNMtaModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "RNMta";
+        return "Mta";
     }
 
     @ReactMethod

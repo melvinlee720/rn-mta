@@ -86,7 +86,7 @@ public class RNMtaModule extends ReactContextBaseJavaModule {
             Promise promise) {
         StatService.trackCustomKVEvent(this.reactContext, eventId, rnMapToProperties(customerParams));
 
-        promise.resolve(1);
+        promise.resolve(0);
     }
 
     @ReactMethod

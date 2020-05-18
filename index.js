@@ -1,6 +1,6 @@
 import { NativeModules, Platform } from 'react-native'
 
-const { Mta } = NativeModules
+const { RNMta } = NativeModules
 
 /**
  * 初始化 MTA
@@ -14,7 +14,7 @@ const startWithAppkey = async ({
   channel = '',
   isDebug = false
 }) => {
-  return Mta.startWithAppkey(appKey, channel, isDebug)
+  return RNMta.startWithAppkey(appKey, channel, isDebug)
 }
 
 /**
@@ -28,7 +28,7 @@ const trackPageBegin = async ({
   appKey = null
 }) => {
   await checkInitialResult()
-  return Mta.trackPageBegin(page, appKey)
+  return RNMta.trackPageBegin(page, appKey)
 }
 
 /**
@@ -44,7 +44,7 @@ const trackPageEnd = async ({
   isRealTime = false
 }) => {
   await checkInitialResult()
-  return Mta.trackPageEnd(page, appKey, isRealTime)
+  return RNMta.trackPageEnd(page, appKey, isRealTime)
 }
 
 /**
@@ -62,7 +62,7 @@ const trackCustomEvent = async ({
   isRealTime = false
 }) => {
   await checkInitialResult()
-  const result = await Mta.trackCustomEvent(
+  const result = await RNMta.trackCustomEvent(
     event, params, appKey, isRealTime
   )
   return handleResult(result)
@@ -81,7 +81,7 @@ const trackCustomEventBegin = async ({
   appKey = null
 }) => {
   await checkInitialResult()
-  const result = await Mta.trackCustomEventBegin(
+  const result = await RNMta.trackCustomEventBegin(
     event, params, appKey
   )
   return handleResult(result)
@@ -102,7 +102,7 @@ const trackCustomEventEnd = async ({
   isRealTime = false
 }) => {
   await checkInitialResult()
-  const result = await Mta.trackCustomEventEnd(
+  const result = await RNMta.trackCustomEventEnd(
     event, params, appKey, isRealTime
   )
   return handleResult(result)
@@ -125,7 +125,7 @@ const trackCustomEventDuration = async ({
   isRealTime = false
 }) => {
   await checkInitialResult()
-  const result = await Mta.trackCustomEventDuration(
+  const result = await RNMta.trackCustomEventDuration(
     event, duration, params, appKey, isRealTime
   )
   return handleResult(result)
@@ -138,7 +138,7 @@ const trackCustomEventDuration = async ({
 const trackActiveBegin = async () => {
   await checkInitialResult()
   if (Platform.OS === 'android') return false
-  return Mta.trackActiveBegin()
+  return RNMta.trackActiveBegin()
 }
 
 /**
@@ -148,7 +148,7 @@ const trackActiveBegin = async () => {
 const trackActiveEnd = async () => {
   await checkInitialResult()
   if (Platform.OS === 'android') return false
-  return Mta.trackActiveEnd()
+  return RNMta.trackActiveEnd()
 }
 
 /**
@@ -158,11 +158,11 @@ const trackActiveEnd = async () => {
  */
 const setUserProperty = async params => {
   await checkInitialResult()
-  return Mta.setUserProperty(params)
+  return RNMta.setUserProperty(params)
 }
 
 let checkInitialResult = async () => {
-  let isInitSuccess = await Mta.checkInitialResult()
+  let isInitSuccess = await RNMta.checkInitialResult()
   if (!isInitSuccess) throw Errs.INITIAL_FAILED
   checkInitialResult = () => true
   return isInitSuccess

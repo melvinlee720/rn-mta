@@ -12,10 +12,11 @@ Pod::Spec.new do |s|
   s.platform      = :ios, "9.0"
   s.homepage     = package['homepage']
   s.source       = { :git => package['repository']['url'], :tag => package['version'] }
-  s.source_files = 'ios/Mta.{h,m}'
+  s.source_files = 'ios/**/*.{h,m}'
   s.requires_arc = true
   s.frameworks = "AdSupport", "CFNetwork", "SystemConfiguration", "CoreTelephony"
   s.libraries = "z", "sqlite3"
+  s.vendored_libraries = "ios/SDK/libmtasdk.a"
 
   s.dependency 'React'
 end

@@ -1,6 +1,6 @@
 import { NativeModules, Platform } from 'react-native'
 
-const { Mta } = NativeModules
+const { RNMta } = NativeModules
 
 /**
  * 初始化 MTA

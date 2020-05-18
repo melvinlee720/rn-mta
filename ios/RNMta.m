@@ -1,8 +1,8 @@
 #import "MTA.h"
 #import "MTAConfig.h"
-#import "Mta.h"
+#import "RNMta.h"
 
-@implementation Mta {
+@implementation RNMta {
     BOOL _isInitSuccess;
 }
 
